@@ -1,0 +1,205 @@
+:root {
+  --brokenwhite: #f1f4fa;
+  --darkblue: #063772;
+  --accent-color: #edcc3f;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+.nav-link {
+  font-weight: 500;
+  color: white;
+}
+
+.nav-item {
+  margin: 0 3px 0 3px;
+}
+
+.navbar .nav-link {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  padding: 15px 20px;
+  position: relative;
+}
+
+.navbar-brand img {
+  pointer-events: none;
+}
+
+/* hanya nav-link yang bukan dropdown-toggle */
+.navbar .nav-link:not(.dropdown-toggle)::after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #edcc3f;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.navbar .nav-link:not(.dropdown-toggle):hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Media Query Navbar */
+/* Small Screen */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  .navbar-nav .nav-link {
+    color: #000 !important; /* biar teksnya kelihatan */
+  }
+}
+
+/* Hero */
+.hero {
+  background: url("assets/img/hero-section.jpg") center center / cover no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6); /* overlay gelap */
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Services */
+.services-container {
+  margin-top: 3%;
+}
+
+.services-category-title::after {
+  content: "";
+  width: 120px;
+  height: 1px;
+  display: inline-block;
+  background: var(--accent-color);
+  margin: 4px 10px;
+}
+
+.service-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.service-item a {
+  text-decoration: none;
+  background-color: none;
+  color: black;
+}
+
+/* Gambar default */
+.service-img {
+  border-radius: 15px;
+  width: 100%;
+  height: auto;
+  transition: transform 0.4s ease-in-out;
+}
+
+/* Efek zoom gambar saat hover di .service-item */
+.service-item:hover .service-img {
+  transform: scale(1.1);
+}
+
+/* Card detail */
+.services-details {
+  background: #fff;
+  padding: 40px 20px 30px 20px;
+  margin: -100px 20px 0 20px; /* efek card numpang ke atas gambar */
+  position: relative;
+  z-index: 2;
+  border-radius: 10px;
+  box-shadow: 0px 0 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Warna default h4 */
+.services-details h4 {
+  font-size: 20px;
+  color: #063772;
+  margin-bottom: 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Hover efek */
+.service-item:hover .services-details {
+  background: #f0efef; /* jadi agak gelap */
+}
+
+/* Why Choose Us Section */
+/* Aturan yang diubah dan disederhanakan */
+.why-choose-us {
+  background-color: var(--darkblue);
+}
+.why-choose-us-header {
+  color: #fff;
+}
+/* Hapus aturan yang menimpa */
+.advantages-point-item div {
+  background: none;
+}
+
+.advantages-point-item h5 {
+  color: var(--darkblue);
+  font-weight: bold;
+}
+
+.advantages-point-item img {
+  pointer-events: none;
+}
+
+/* Animasi Poin Why Choose Us */
+.why-choose-us .advantages-point-item {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Tambah transisi untuk bayangan juga */
+  background-color: var(--brokenwhite);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.advantages-point-item:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.achievement-parent h2 {
+  font-size: 60px;
+  font-weight: bold;
+  color: var(--darkblue);
+}
+
+.achievement-parent p {
+  font-size: 20px;
+}
