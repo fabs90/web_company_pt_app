@@ -2,6 +2,7 @@
   --brokenwhite: #f1f4fa;
   --darkblue: #063772;
   --accent-color: #edcc3f;
+  --greenprimary: #00991d;
 }
 
 /* Navbar */
@@ -12,6 +13,12 @@
   width: 100%;
   z-index: 1000;
 }
+
+.navbar.scrolled {
+  background-color: var(--greenprimary) !important;
+  transition: background-color 0.5s ease-in-out;
+}
+
 .nav-link {
   font-weight: 500;
   color: white;
@@ -60,10 +67,17 @@
   align-items: center;
 }
 
+/* Styling untuk tombol CTA mobile */
+.navbar-collapse .btn {
+  width: 100%;
+  justify-content: center;
+}
+
 /* Media Query Navbar */
 /* Small Screen */
 @media (max-width: 991px) {
   .navbar-collapse {
+    margin-top: 10px;
     background: #fff;
     padding: 1rem;
     border-radius: 10px;
@@ -101,9 +115,6 @@
 }
 
 /* Services */
-.services-container {
-  margin-top: 3%;
-}
 
 .services-category-title::after {
   content: "";
@@ -155,7 +166,7 @@
 /* Warna default h4 */
 .services-details h4 {
   font-size: 20px;
-  color: #063772;
+  color: black;
   margin-bottom: 10px;
   transition: color 0.3s ease-in-out;
 }
@@ -168,7 +179,7 @@
 /* Why Choose Us Section */
 /* Aturan yang diubah dan disederhanakan */
 .why-choose-us {
-  background-color: var(--darkblue);
+  background-color: var(--greenprimary);
 }
 .why-choose-us-header {
   color: #fff;
@@ -179,7 +190,7 @@
 }
 
 .advantages-point-item h5 {
-  color: var(--darkblue);
+  color: var(--greenprimary);
   font-weight: bold;
 }
 
@@ -204,7 +215,7 @@
 .achievement-parent h2 {
   font-size: 60px;
   font-weight: bold;
-  color: var(--darkblue);
+  color: black;
 }
 
 .achievement-parent p {
@@ -250,7 +261,7 @@
 /* Footer */
 
 .footer {
-  background-color: var(--darkblue);
+  background-color: var(--greenprimary);
 }
 
 .footer img {
@@ -264,5 +275,5 @@
 }
 
 .footer-link:hover {
-  color: #0d6efd;
+  color: var(--accent-color);
 }

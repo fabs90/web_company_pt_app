@@ -1,11 +1,16 @@
-// document.addEventListener("DOMContentLoaded", function () {
-//   var elem = document.querySelector(".masonry-grid");
-//   if (elem) {
-//     new Masonry(elem, {
-//       itemSelector: ".grid-item",
-//       columnWidth: ".grid-sizer",
-//       gutter: 15,
-//       percentPosition: true,
-//     });
-//   }
-// });
+AOS.init({
+  once: true, // Mengaktifkan opsi 'once'
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const navbar = document.querySelector(".navbar");
+  const scrollThreshold = 100;
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > scrollThreshold) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+});
