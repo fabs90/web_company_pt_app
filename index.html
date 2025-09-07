@@ -27,6 +27,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-transparent p-3">
@@ -52,7 +53,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav ms-auto">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
             <li class="nav-item">
               <a class="nav-link" aria-current="page" href="#">Home</a>
             </li>
@@ -62,29 +63,40 @@
             <li class="nav-item">
               <a class="nav-link" href="#">Pricing</a>
             </li>
-            <li class="nav-item-dropdown dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Dropdown link
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </li>
-              </ul>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+
+            <li class="nav-item d-none d-lg-block">
+              <span class="separator">|</span>
+            </li>
+            <li class="nav-item d-none d-lg-block">
+              <div class="row d-flex flex-column">
+                <div class="col">
+                  <p class="text-center text-white m-0 fw-light">
+                    Hubungi Kami Disini:
+                  </p>
+                </div>
+                <div class="col mt-1">
+                  <a
+                    aria-label="Chat on WhatsApp"
+                    href="https://wa.me/6281274172224"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <img
+                      alt="Chat on WhatsApp"
+                      src="/assets/img/icon/WhatsAppButtonGreenSmall.svg"
+                      class="footer-link"
+                    />
+                  </a>
+                </div>
+              </div>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-
     <!-- Hero -->
     <section class="hero">
       <div class="hero-content text-start">
@@ -401,12 +413,168 @@
             </h1>
           </div>
           <div class="col">
-            <div class="row">
-              <div class="col-2"></div>
+            <div class="row logo-row">
+              <div class="logo-container">
+                <img
+                  src="/assets/img/clients/Haeng-Sung-Logo-Photoroom.webp"
+                  alt="client_1"
+                  class="logo-grayscale"
+                />
+              </div>
+              <div class="logo-container">
+                <img
+                  src="/assets/img/clients/Logo-Tenma-Kuda.webp"
+                  alt="client_1"
+                  class="logo-grayscale"
+                />
+              </div>
+              <div class="logo-container">
+                <img
+                  src="/assets/img/clients/pt_hogy_indonesia.webp"
+                  alt="client_1"
+                  class="logo-grayscale"
+                />
+              </div>
+              <div class="logo-container">
+                <img
+                  src="/assets/img/clients/rhythm-kyosin-removebg.webp"
+                  alt="client_1"
+                  class="logo-grayscale"
+                />
+              </div>
+              <div class="logo-container">
+                <img
+                  src="/assets/img/clients/super-stell-karawang-ssk.webp"
+                  alt="client_1"
+                  class="logo-grayscale"
+                />
+              </div>
+              <div class="logo-container">
+                <img
+                  src="/assets/img/clients/umeda-logo.webp"
+                  alt="client_1"
+                  class="logo-grayscale"
+                />
+              </div>
             </div>
           </div>
         </div>
       </div>
+    </section>
+
+    <!-- Footer -->
+    <section>
+      <footer class="text-light footer">
+        <div class="container py-5">
+          <div class="row g-4">
+            <div class="col-lg-3 col-md-6">
+              <div class="mb-4">
+                <img
+                  src="assets/img/logo_pt_transparent.webp"
+                  width="80"
+                  height="100"
+                  alt="logo_perusahaan"
+                />
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+              <h5 class="mb-4">Link Cepat</h5>
+              <ul class="list-unstyled">
+                <li class="mb-2">
+                  <a href="#" class="footer-link">Home</a>
+                </li>
+                <li class="mb-2">
+                  <a href="#" class="footer-link">Tentang Kami</a>
+                </li>
+                <li class="mb-2">
+                  <a href="#" class="footer-link">Layanan</a>
+                </li>
+                <li class="mb-2">
+                  <a href="#" class="footer-link">Portofolio</a>
+                </li>
+                <li class="mb-2">
+                  <a href="#" class="footer-link">Kontak Kami</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-lg-2 col-md-6">
+              <h5 class="mb-4">Layanan Kami</h5>
+              <ul class="list-unstyled">
+                <li class="mb-2">
+                  <a href="#" class="footer-link">Web Design</a>
+                </li>
+                <li class="mb-2">
+                  <a href="#" class="footer-link">Development</a>
+                </li>
+                <li class="mb-2">
+                  <a href="#" class="footer-link">Marketing</a>
+                </li>
+                <li class="mb-2">
+                  <a href="#" class="footer-link">Consulting</a>
+                </li>
+                <li class="mb-2">
+                  <a href="#" class="footer-link">Analytics</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <h5 class="mb-4">Alamat & Kontak</h5>
+              <ul class="list-unstyled">
+                <li class="mb-3">
+                  <img
+                    src="/assets/img/icon/address-location-map-svgrepo-com.svg"
+                    alt="Lokasi"
+                    width="20"
+                  />
+                  Kp.Rawa Julang RT. 004 RW. 002, Mekarwangi, Cikarang Barat,
+                  Kabupaten Bekasi, Jawa Barat, 17530
+                </li>
+                <li class="mb-3">
+                  <a
+                    aria-label="Chat on WhatsApp"
+                    href="https://wa.me/6281274172224"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <img
+                      alt="Chat on WhatsApp"
+                      src="/assets/img/icon/WhatsAppButtonGreenSmall.svg"
+                      class="footer-link"
+                    />
+                  </a>
+                </li>
+                <li class="mb-3">
+                  <a
+                    href="mailto:PTAMBANYPUTRAPERKASA@GMAIL.COM"
+                    class="footer-link text-lowercase"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <img
+                      src="/assets/img/icon/email-svgrepo-com .svg"
+                      alt="Email"
+                      width="20"
+                    />
+                    PTAMBANYPUTRAPERKASA@GMAIL.COM</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="row mt-5">
+            <div class="col-12">
+              <hr class="mb-4" />
+              <div class="text-center">
+                <p class="mb-0">&copy; 2025 Ambany Putra Perkasa.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </section>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"

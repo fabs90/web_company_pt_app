@@ -53,6 +53,13 @@
   left: 0;
 }
 
+.separator {
+  color: white; /* Mengatur warna pembatas */
+  padding: 0 10px; /* Memberikan sedikit ruang di sekitar pembatas */
+  display: flex;
+  align-items: center;
+}
+
 /* Media Query Navbar */
 /* Small Screen */
 @media (max-width: 991px) {
@@ -202,4 +209,60 @@
 
 .achievement-parent p {
   font-size: 20px;
+}
+
+/* Client */
+
+.logo-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.logo-container {
+  flex-basis: 250px; /* Ukuran dasar untuk setiap logo */
+  text-align: center;
+}
+
+.logo-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.logo-grayscale {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease-in-out;
+}
+
+.logo-grayscale:hover {
+  filter: grayscale(0%);
+}
+
+@media (max-width: 991px) {
+  .logo-container {
+    flex-basis: 150px; /* Ukuran dasar untuk setiap logo */
+    text-align: center;
+  }
+}
+
+/* Footer */
+
+.footer {
+  background-color: var(--darkblue);
+}
+
+.footer img {
+  pointer-events: none;
+}
+
+.footer-link {
+  color: #f8f9fa;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #0d6efd;
 }
