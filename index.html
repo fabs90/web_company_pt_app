@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>PT Ambany Putra Perkasa</title>
+    <title>Home - PT Ambany Putra Perkasa</title>
 
     <!-- Favicons -->
     <link href="assets/img/logo_pt.webp" rel="icon" />
@@ -39,7 +39,7 @@
           <img
             src="assets/img/logo_pt_transparent.webp"
             width="60"
-            height="81"
+            height="80"
             alt="logo"
           />
         </div>
@@ -58,10 +58,12 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav ms-auto align-items-lg-center">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Home</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Tentang Kami</a>
+              <a class="nav-link" href="about_us.html">Tentang Kami</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Layanan</a>
@@ -130,9 +132,6 @@
       </div>
     </section>
 
-    <!-- About Us Home -->
-    <section></section>
-
     <!-- Services -->
     <section class="services">
       <div class="container-fluid pt-5 services-container">
@@ -162,7 +161,7 @@
             <div class="service-item">
               <a href="#">
                 <img
-                  src="assets/img/thumbnail/thumbnail_services_hazard_b3.webp"
+                  src="assets/img/thumbnail/thumbnail_services_hazard_b3_new.webp"
                   class="img-fluid service-img"
                   alt="service"
                 />
@@ -386,7 +385,9 @@
           </div>
           <!-- List Pencapaian -->
           <div class="col mt-3 mt-md-5 mt-lg-5">
-            <div class="row text-center achievement-parent g-5 g-md-0 g-lg-0">
+            <div
+              class="row text-center achievement-parent g-5 g-md-0 g-lg-0 justify-content-center"
+            >
               <div class="col-12 col-md-4 col-lg-4">
                 <div class="row">
                   <div class="col-12">
@@ -408,6 +409,18 @@
                 </div>
               </div>
               <div class="col-12 col-md-4 col-lg-4">
+                <div class="row">
+                  <div class="col-12">
+                    <h2>1100 Ton+</h2>
+                  </div>
+                  <div class="col-12">
+                    <p class="m-0 fw-light">
+                      Limbah Non-B3 Yang Telah Dikelola
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-4 col-lg-4 mt-md-5 mt-lg-5">
                 <div class="row">
                   <div class="col-12">
                     <h2>100%</h2>
@@ -482,6 +495,30 @@
       </div>
     </section>
 
+    <!-- Maps -->
+    <section>
+      <div class="container-fluid py-5">
+        <div class="row mx-0 mx-md-5 mx-lg-5">
+          <div class="col-12">
+            <h1 class="fw-bold text-uppercase" style="color: #00991d">
+              Lokasi Kami
+            </h1>
+          </div>
+          <div class="col mt-3 mt-md-5 mt-lg-5 text-center">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.6544547688427!2d107.07371007380375!3d-6.309046193680229!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69910019caa5b9%3A0x4c9c6c115b623f38!2sPT%20AMBANY%20PUTRA%20PERKASA!5e0!3m2!1sen!2sid!4v1757377985447!5m2!1sen!2sid"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Footer -->
     <section>
       <footer class="text-light footer">
@@ -540,8 +577,14 @@
                     alt="Lokasi"
                     width="20"
                   />
-                  Kp.Rawa Julang RT. 004 RW. 002, Mekarwangi, Cikarang Barat,
-                  Kabupaten Bekasi, Jawa Barat, 17530
+                  <a
+                    href="https://maps.app.goo.gl/FmwMCaycF1HDwYyc9"
+                    target="_blank"
+                    class="footer-link-email"
+                  >
+                    Kp.Rawa Julang RT. 004 RW. 002, Mekarwangi, Cikarang Barat,
+                    Kabupaten Bekasi, Jawa Barat, 17530
+                  </a>
                 </li>
                 <li class="mb-3 d-flex align-items-center">
                   <a
@@ -561,7 +604,7 @@
                 <li class="mb-3">
                   <a
                     href="mailto:PTAMBANYPUTRAPERKASA@GMAIL.COM"
-                    class="footer-link text-lowercase"
+                    class="footer-link-email text-lowercase"
                     target="_blank"
                     rel="noopener"
                   >

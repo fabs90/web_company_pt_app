@@ -114,6 +114,30 @@
   z-index: 1;
 }
 
+.hero-about {
+  background: url("assets/img/collapse-content/img5.webp") center center / cover
+    no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  color: white;
+  position: relative;
+}
+.hero-about::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6); /* overlay gelap */
+}
+.hero-about-content {
+  position: relative;
+  z-index: 1;
+}
+
 /* Services */
 
 .services-category-title::after {
@@ -271,9 +295,33 @@
 .footer-link {
   color: #f8f9fa;
   text-decoration: none;
+  position: relative; /* Penting untuk positioning pseudo-element */
   transition: color 0.3s ease;
+}
+
+.footer-link-email {
+  color: #f8f9fa;
+  text-decoration: none;
+}
+
+.footer-link::after {
+  content: ""; /* Wajib untuk pseudo-element */
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0); /* Awalnya, garis bawah tidak terlihat (skala 0) */
+  height: 2px;
+  bottom: -2px; /* Atur posisi garis bawah di bawah teks */
+  left: 0;
+  background-color: var(--accent-color);
+  transform-origin: bottom right; /* Titik asal animasi (muncul dari kanan) */
+  transition: transform 0.3s ease-out; /* Animasi transisi */
 }
 
 .footer-link:hover {
   color: var(--accent-color);
+}
+
+.footer-link:hover::after {
+  transform: scaleX(1); /* Saat di-hover, skala 100% (garis bawah terlihat) */
+  transform-origin: bottom left; /* Titik asal animasi (muncul dari kiri) */
 }
