@@ -20,7 +20,7 @@
 }
 
 .nav-link {
-  font-weight: 500;
+  font-weight: 400;
   color: white;
 }
 
@@ -135,6 +135,31 @@
   background: rgba(0, 0, 0, 0.6); /* overlay gelap */
 }
 .hero-about-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-contact {
+  background: url("assets/img/hero_contact.webp") center center / cover
+    no-repeat;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  color: white;
+  position: relative;
+}
+
+.hero-contact::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6); /* overlay gelap */
+}
+.hero-contact-content {
   position: relative;
   z-index: 1;
 }
@@ -365,4 +390,15 @@
     width: 60%;
     height: auto;
   }
+}
+
+.contact-us p {
+  color: var(--greenprimary);
+  font-size: 20px;
+}
+
+.map-frame {
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
