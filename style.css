@@ -117,13 +117,14 @@
 .hero-about {
   background: url("assets/img/collapse-content/img5.webp") center center / cover
     no-repeat;
-  height: 100vh;
+  height: 80vh;
   display: flex;
   align-items: center;
   justify-content: start;
   color: white;
   position: relative;
 }
+
 .hero-about::before {
   content: "";
   position: absolute;
@@ -198,6 +199,14 @@
 /* Hover efek */
 .service-item:hover .services-details {
   background: #f0efef; /* jadi agak gelap */
+}
+
+/* Carousel Armada */
+.splide__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 /* Why Choose Us Section */
@@ -325,3 +334,19 @@
   transform: scaleX(1); /* Saat di-hover, skala 100% (garis bawah terlihat) */
   transform-origin: bottom left; /* Titik asal animasi (muncul dari kiri) */
 }
+
+/* Visi-Misi */
+.visi-misi-section {
+  background-color: var(--greenprimary);
+}
+
+.visi-misi-section p {
+  font-size: 18px;
+  color: var(--brokenwhite);
+}
+
+.visi-misi-container h2 {
+  color: var(--brokenwhite);
+}
+
+/* Download Company Profile */
