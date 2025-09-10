@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const navbar = document.querySelector(".navbar");
+  const navbar = document.querySelector(".navbar-about");
   const scrollThreshold = 100;
 
   function checkScrollPosition() {
@@ -13,4 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
   checkScrollPosition();
 
   window.addEventListener("scroll", checkScrollPosition);
+});
+
+AOS.init({
+  once: true, // Mengaktifkan opsi 'once'
 });

@@ -349,4 +349,20 @@
   color: var(--brokenwhite);
 }
 
+/* Struktur Organisasi */
+.struktur-organisasi img {
+  pointer-events: none;
+}
+
 /* Download Company Profile */
+.download-profile-company img {
+  width: 30%;
+  height: auto;
+}
+
+@media (max-width: 991px) {
+  .download-profile-company img {
+    width: 60%;
+    height: auto;
+  }
+}
