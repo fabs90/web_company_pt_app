@@ -399,6 +399,12 @@
 
 .map-frame {
   width: 100%;
-  height: 100%;
-  position: relative;
+  height: 400px;
+}
+
+@media (max-width: 991px) {
+  .map-frame {
+    width: 100%;
+    height: 350px;
+  }
 }

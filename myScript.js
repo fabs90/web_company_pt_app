@@ -16,7 +16,7 @@ new Splide(".splide", {
 }).mount();
 
 document.addEventListener("DOMContentLoaded", function () {
-  const navbar = document.querySelector(".navbar-home");
+  const navbar = document.querySelector(".navbar");
   const scrollThreshold = 100;
 
   function checkScrollPosition() {
