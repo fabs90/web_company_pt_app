@@ -6,8 +6,17 @@
 }
 
 /* Navbar */
-.navbar {
+.navbar-about {
   position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar-documentation {
+  background-color: var(--greenprimary);
+  position: fixed; /* Kunci utamanya di sini */
   top: 0;
   left: 0;
   width: 100%;
@@ -413,4 +422,8 @@
     width: 100%;
     height: 350px;
   }
+}
+
+.documentation {
+  padding-top: 100px;
 }

@@ -19,7 +19,7 @@ new Splide(".splide-warehouse", {
   type: "loop",
   perPage: 3,
   autoplay: true,
-  interval: 3000,
+  interval: 4000,
   gap: "1rem",
   breakpoints: {
     640: {
