@@ -15,6 +15,19 @@ new Splide(".splide", {
   },
 }).mount();
 
+new Splide(".splide-warehouse", {
+  type: "loop",
+  perPage: 3,
+  autoplay: true,
+  interval: 3000,
+  gap: "1rem",
+  breakpoints: {
+    640: {
+      perPage: 1,
+    },
+  },
+}).mount();
+
 document.addEventListener("DOMContentLoaded", function () {
   const navbar = document.querySelector(".navbar");
   const scrollThreshold = 100;

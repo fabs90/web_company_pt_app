@@ -234,6 +234,12 @@
   border-radius: 10px;
 }
 
+.splide-warehouse img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
 /* Why Choose Us Section */
 /* Aturan yang diubah dan disederhanakan */
 .why-choose-us {
