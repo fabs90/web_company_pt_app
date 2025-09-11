@@ -427,3 +427,89 @@
 .documentation {
   padding-top: 100px;
 }
+
+.video-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.video-thumbnail {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-thumbnail:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.video-thumbnail img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.play-button svg {
+  fill: white;
+  width: 24px;
+  height: 24px;
+}
+
+.video-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 10px;
+  font-size: 14px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.modal-content {
+  background-color: var(--brokenwhite);
+}
+
+.modal-header {
+  border-bottom: none;
+}
+
+.modal-title {
+  color: var(--darkblue);
+}
+
+.modal-body {
+  position: relative;
+  padding-top: 56.25%;
+}
+
+.modal-body video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}

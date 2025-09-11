@@ -68,10 +68,10 @@
               <a class="nav-link" href="#">Layanan</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Dokumentasi</a>
+              <a class="nav-link" href="documentation.html">Dokumentasi</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Kontak Kami</a>
+              <a class="nav-link" href="contact_us.html">Kontak Kami</a>
             </li>
 
             <li class="nav-item d-none d-lg-block">
@@ -133,10 +133,40 @@
           </div>
           <div
             class="col-12 mt-3 mt-md-5 mt-lg-5 text-center justify-content-center"
-          ></div>
+          >
+            <div id="video-grid-container" class="video-grid"></div>
+          </div>
         </div>
       </div>
     </section>
+
+  <!-- Video Modal -->
+      <div
+        class="modal fade"
+        id="videoModal"
+        tabindex="-1"
+        aria-labelledby="videoModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="videoModalLabel"></h5>
+              <button
+                type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+             <video id="videoPlayer" controls></video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
 
     <!-- Footer -->
     <section>
@@ -271,5 +301,5 @@
     crossorigin="anonymous"
   ></script>
   <script src="aos-master/dist/aos.js"></script>
-  <script src="script-about.js"></script>
+  <script src="script-documentation.js"></script>
 </html>
