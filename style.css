@@ -501,10 +501,9 @@
 
 .modal-body {
   position: relative;
-  padding-top: 56.25%;
 }
 
-.modal-body video {
+.modal-body iframe {
   position: absolute;
   top: 0;
   left: 0;

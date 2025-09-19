@@ -1,27 +1,38 @@
 const videos = [
   {
-    thumbnail:
-      "https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?q=80&w=1456&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    videoUrl: "assets/vid/IMG_2286.MOV",
-    title: "Gudang Proyek 1",
+    thumbnail: "https://img.youtube.com/vi/snJ2uw1MxIw/hqdefault.jpg",
+    videoUrl: "https://www.youtube.com/embed/snJ2uw1MxIw?autoplay=1",
+    title: "Dokumentasi 1 - PT Ambany Putra Perkasa",
   },
   {
-    thumbnail:
-      "https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?q=80&w=1456&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    videoUrl: "assets/vid/IMG_2293.MOV",
-    title: "Gudang Proyek 2",
+    thumbnail: "https://img.youtube.com/vi/K_lFY0Fwab8/hqdefault.jpg",
+    videoUrl: "https://www.youtube.com/embed/K_lFY0Fwab8?autoplay=1",
+    title: "Dokumentasi 2 - PT Ambany Putra Perkasa",
   },
   {
-    thumbnail:
-      "https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?q=80&w=1456&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    videoUrl: "assets/vid/IMG_5516.MOV",
-    title: "Gudang Proyek 3",
+    thumbnail: "https://img.youtube.com/vi/otjXc3t3XTg/hqdefault.jpg",
+    videoUrl: "https://www.youtube.com/embed/otjXc3t3XTg?autoplay=1",
+    title: "Dokumentasi 3 - PT Ambany Putra Perkasa",
   },
   {
-    thumbnail:
-      "https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?q=80&w=1456&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    videoUrl: "assets/vid/IMG_5541.MOV",
-    title: "Gudang Proyek 4",
+    thumbnail: "https://img.youtube.com/vi/hknSzWDM5yE/hqdefault.jpg",
+    videoUrl: "https://www.youtube.com/embed/hknSzWDM5yE?autoplay=1",
+    title: "Dokumentasi 4 - PT Ambany Putra Perkasa",
+  },
+  {
+    thumbnail: "https://img.youtube.com/vi/EnP9k_fmHiM/hqdefault.jpg",
+    videoUrl: "https://www.youtube.com/embed/EnP9k_fmHiM?autoplay=1",
+    title: "Dokumentasi 5 - PT Ambany Putra Perkasa",
+  },
+  {
+    thumbnail: "https://img.youtube.com/vi/iotI9MjrWSY/hqdefault.jpg",
+    videoUrl: "https://www.youtube.com/embed/iotI9MjrWSY?autoplay=1",
+    title: "Dokumentasi 6 - PT Ambany Putra Perkasa",
+  },
+  {
+    thumbnail: "https://img.youtube.com/vi/79g_MZ2hjiE/hqdefault.jpg",
+    videoUrl: "https://www.youtube.com/embed/79g_MZ2hjiE?autoplay=1",
+    title: "Dokumentasi 7 - PT Ambany Putra Perkasa",
   },
 ];
 
@@ -57,18 +68,16 @@ function renderVideoGallery() {
       videoPlayer.src = video.videoUrl;
       videoModalLabel.textContent = video.title;
       videoModal.show();
-      videoPlayer.play(); // Putar video secara otomatis
     });
     videoGridContainer.appendChild(thumbnail);
   });
 }
 
-// Menghentikan video saat modal ditutup
+// Stop video saat modal ditutup
 document
   .getElementById("videoModal")
   .addEventListener("hidden.bs.modal", () => {
-    videoPlayer.pause();
-    videoPlayer.currentTime = 0;
+    videoPlayer.src = "";
   });
 
 // Panggil fungsi untuk merender galeri saat halaman dimuat
