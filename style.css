@@ -82,22 +82,6 @@
   justify-content: center;
 }
 
-/* Media Query Navbar */
-/* Small Screen */
-@media (max-width: 991px) {
-  .navbar-collapse {
-    margin-top: 10px;
-    background: #fff;
-    padding: 1rem;
-    border-radius: 10px;
-    text-align: center;
-  }
-
-  .navbar-nav .nav-link {
-    color: #000 !important; /* biar teksnya kelihatan */
-  }
-}
-
 /* Hero */
 .hero {
   background: url("assets/img/hero-section.jpg") center center / cover no-repeat;
@@ -169,6 +153,31 @@
   background: rgba(0, 0, 0, 0.6); /* overlay gelap */
 }
 .hero-contact-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-services {
+  background: url("assets/img/collapse-content/img2.webp") center center / cover
+    no-repeat;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  color: white;
+  position: relative;
+}
+
+.hero-services::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6); /* overlay gelap */
+}
+.hero-services-content {
   position: relative;
   z-index: 1;
 }
@@ -249,6 +258,17 @@
   border-radius: 10px;
 }
 
+.splide-equipment .splide__slide {
+  width: 500px;
+  height: 500px;
+}
+
+.splide-equipment img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
 /* Why Choose Us Section */
 /* Aturan yang diubah dan disederhanakan */
 .why-choose-us {
@@ -324,13 +344,6 @@
   filter: grayscale(0%);
 }
 
-@media (max-width: 991px) {
-  .logo-container {
-    flex-basis: 150px; /* Ukuran dasar untuk setiap logo */
-    text-align: center;
-  }
-}
-
 /* Footer */
 
 .footer {
@@ -400,13 +413,6 @@
   height: auto;
 }
 
-@media (max-width: 991px) {
-  .download-profile-company img {
-    width: 60%;
-    height: auto;
-  }
-}
-
 .contact-us p {
   color: var(--greenprimary);
   font-size: 20px;
@@ -415,13 +421,6 @@
 .map-frame {
   width: 100%;
   height: 400px;
-}
-
-@media (max-width: 991px) {
-  .map-frame {
-    width: 100%;
-    height: 350px;
-  }
 }
 
 .documentation {
@@ -512,4 +511,39 @@
   width: 100%;
   height: 100%;
   border: 0;
+}
+
+@media (max-width: 991px) {
+  /* Media Query Navbar */
+  .navbar-collapse {
+    margin-top: 10px;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  .navbar-nav .nav-link {
+    color: #000 !important; /* biar teksnya kelihatan */
+  }
+
+  .splide-equipment .splide__slide {
+    width: 400px;
+    height: 400px;
+  }
+
+  .logo-container {
+    flex-basis: 150px; /* Ukuran dasar untuk setiap logo */
+    text-align: center;
+  }
+
+  .download-profile-company img {
+    width: 60%;
+    height: auto;
+  }
+
+  .map-frame {
+    width: 100%;
+    height: 350px;
+  }
 }

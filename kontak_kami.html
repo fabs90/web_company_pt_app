@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dokumentasi - PT Ambany Putra Perkasa</title>
+    <title>Kontak Kami - PT Ambany Putra Perkasa</title>
 
     <!-- Favicons -->
     <link href="assets/img/logo_pt.webp" rel="icon" />
@@ -32,7 +32,9 @@
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-documentation navbar-expand-lg navbar-dark p-3">
+    <nav
+      class="navbar navbar-about navbar-expand-lg navbar-dark bg-transparent p-3"
+    >
       <div class="container">
         <div class="navbar-brand">
           <img
@@ -62,16 +64,16 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about_us.html">Tentang Kami</a>
+              <a class="nav-link" href="tentang_kami.html">Tentang Kami</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Layanan</a>
+              <a class="nav-link" href="layanan.html">Layanan</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="documentation.html">Dokumentasi</a>
+              <a class="nav-link" href="dokumentasi.html">Dokumentasi</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact_us.html">Kontak Kami</a>
+              <a class="nav-link" href="kontak_kami.html">Kontak Kami</a>
             </li>
 
             <li class="nav-item d-none d-lg-block">
@@ -118,56 +120,102 @@
       </div>
     </nav>
 
-    <!-- documentation -->
-    <section class="documentation">
+    <!-- Hero -->
+    <section class="hero-contact">
+      <div class="hero-about-content text-start" data-aos="fade-down">
+        <h1 class="display-4 fw-medium text-uppercase mx-5">Kontak Kami</h1>
+      </div>
+    </section>
+
+    <!-- Contact Us -->
+    <section class="contact-us">
       <div class="container-fluid py-5">
         <div class="row mx-0 mx-md-5 mx-lg-5">
           <div class="col-12">
             <h1 class="fw-bold text-uppercase" style="color: #00991d">
-              Dokumentasi
+              Punya Pertanyaan?
             </h1>
             <p class="fw-light m-0" style="font-size: 18px">
-              Berikut adalah beberapa dokumentasi dari kegiatan operasional dan
-              layanan kami.
+              Kami melayani konsultasi gratis terkait Pengelolaan Limbah B3,
+              diskusikan kepada kami kebutuhan pengelolaan limbah Anda dengan
+              menghubungi kontak di bawah ini.
             </p>
           </div>
           <div
             class="col-12 mt-3 mt-md-5 mt-lg-5 text-center justify-content-center"
           >
-            <div id="video-grid-container" class="video-grid"></div>
+            <div class="row g-4">
+              <div class="col-12">
+                <div
+                  class="d-flex flex-column flex-md-row flex-lg-row align-items-center"
+                >
+                  <img
+                    src="assets/img/icon/location-pin-svgrepo-com.svg"
+                    alt="Lokasi"
+                    width="50"
+                  />
+                  <p class="my-0 mx-2 fw-bold text-break">
+                    Kp.Rawa Julang RT. 004 RW. 002, Mekarwangi, Cikarang Barat,
+                    Kabupaten Bekasi, Jawa Barat, 17530
+                  </p>
+                </div>
+              </div>
+              <div class="col-12">
+                <div
+                  class="d-flex flex-column flex-md-row flex-lg-row align-items-center"
+                >
+                  <a
+                    aria-label="Chat on WhatsApp"
+                    href="https://wa.me/6281274172224"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <img
+                      alt="Chat on WhatsApp"
+                      src="assets/img/icon/WhatsAppButtonGreenSmall.svg"
+                    />
+                  </a>
+                  <p class="fw-bold ms-2 mb-0 mt-0 me-0">(+6281274172224)</p>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <div
+                  class="d-flex flex-column flex-md-row flex-lg-row align-items-center"
+                >
+                  <img
+                    src="assets/img/icon/email-green-svgrepo-com.svg"
+                    alt="Email"
+                    width="50"
+                  />
+                  <p class="my-0 mx-2 fw-bold text-break">
+                    PTAMBANYPUTRAPERKASA@GMAIL.COM
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-  <!-- Video Modal -->
-      <div
-        class="modal fade"
-        id="videoModal"
-        tabindex="-1"
-        aria-labelledby="videoModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-xl modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="videoModalLabel"></h5>
-              <button
-                type="button"
-                class="btn-close btn-close-white"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-             <video id="videoPlayer" controls></video>
-            </div>
+    <!-- Maps -->
+    <section>
+      <div class="container-fluid py-0">
+        <div class="row mx-0 mx-md-5 mx-lg-5">
+          <div class="col-12 text-center">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.6544547688427!2d107.07371007380375!3d-6.309046193680229!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69910019caa5b9%3A0x4c9c6c115b623f38!2sPT%20AMBANY%20PUTRA%20PERKASA!5e0!3m2!1sen!2sid!4v1757377985447!5m2!1sen!2sid"
+              class="map-frame"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
         </div>
       </div>
-    </main>
-
-
+    </section>
     <!-- Footer -->
     <section>
       <footer class="text-light footer">
@@ -219,13 +267,30 @@
               <h5 class="mb-4">Layanan Kami</h5>
               <ul class="list-unstyled">
                 <li class="mb-2">
-                  <a href="#" class="footer-link" target="_blank" rel="noopener"
-                    >A</a
+                  <a
+                    href="layanan.html#layanan-b3"
+                    class="footer-link"
+                    target="_blank"
+                    rel="noopener"
+                    >Limbah B3</a
                   >
                 </li>
                 <li class="mb-2">
-                  <a href="#" class="footer-link" target="_blank" rel="noopener"
-                    >B</a
+                  <a
+                    href="layanan.html#layanan-non-b3"
+                    class="footer-link"
+                    target="_blank"
+                    rel="noopener"
+                    >Limbah Non-B3</a
+                  >
+                </li>
+                <li class="mb-2">
+                  <a
+                    href="layanan.html#layanan-logistik"
+                    class="footer-link"
+                    target="_blank"
+                    rel="noopener"
+                    >Logistik</a
                   >
                 </li>
               </ul>
@@ -301,5 +366,5 @@
     crossorigin="anonymous"
   ></script>
   <script src="aos-master/dist/aos.js"></script>
-  <script src="script-documentation.js"></script>
+  <script src="script-about.js"></script>
 </html>

@@ -19,6 +19,19 @@ new Splide(".splide-warehouse", {
   type: "loop",
   perPage: 3,
   autoplay: true,
+  interval: 3500,
+  gap: "1rem",
+  breakpoints: {
+    640: {
+      perPage: 1,
+    },
+  },
+}).mount();
+
+new Splide(".splide-equipment", {
+  type: "loop",
+  perPage: 3,
+  autoplay: true,
   interval: 4000,
   gap: "1rem",
   breakpoints: {
