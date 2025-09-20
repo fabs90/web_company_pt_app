@@ -27,3 +27,10 @@ RewriteRule ^(index|index\.html)$ / [R=301,L]
   AddOutputFilterByType DEFLATE application/x-httpd-fastphp
 </IfModule>
 
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+</IfModule>
