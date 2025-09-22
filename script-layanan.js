@@ -1,26 +1,2 @@
-document.addEventListener("DOMContentLoaded", function () {
-  let e = document.querySelector(".navbar-about");
-  function o() {
-    window.scrollY > 100
-      ? e.classList.add("scrolled")
-      : e.classList.remove("scrolled");
-  }
-  o(), window.addEventListener("scroll", o);
-}),
-  AOS.init({ once: !0 }),
-  document.addEventListener("DOMContentLoaded", function () {
-    let e = document.querySelectorAll(".accordion-button");
-    e.forEach((e) => {
-      e.addEventListener("click", function () {
-        let e = this.closest("#accordionExample"),
-          o = document.getElementById(
-            e ? "accordion-non-b3" : "accordionExample"
-          ),
-          t = o.querySelectorAll(".accordion-collapse.show");
-        t.forEach((e) => {
-          let o = new bootstrap.Collapse(e, { toggle: !1 });
-          o.hide();
-        });
-      });
-    });
-  });
+document.addEventListener("DOMContentLoaded",function(){let e=document.querySelector(".navbar-about");function o(){window.scrollY>100?e.classList.add("scrolled"):e.classList.remove("scrolled")}
+o(),window.addEventListener("scroll",o)}),AOS.init({once:!0}),document.addEventListener("DOMContentLoaded",function(){let e=document.querySelectorAll(".accordion-button");e.forEach((e)=>{e.addEventListener("click",function(){let e=this.closest("#accordionExample"),o=document.getElementById(e?"accordion-non-b3":"accordionExample"),t=o.querySelectorAll(".accordion-collapse.show");t.forEach((e)=>{let o=new bootstrap.Collapse(e,{toggle:!1});o.hide()})})})})

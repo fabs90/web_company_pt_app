@@ -1,10 +1,2 @@
-document.addEventListener("DOMContentLoaded", function () {
-  let e = document.querySelector(".navbar-about");
-  function t() {
-    window.scrollY > 100
-      ? e.classList.add("scrolled")
-      : e.classList.remove("scrolled");
-  }
-  t(), window.addEventListener("scroll", t);
-}),
-  AOS.init({ once: !0 });
+document.addEventListener("DOMContentLoaded",function(){let e=document.querySelector(".navbar-about");function t(){window.scrollY>100?e.classList.add("scrolled"):e.classList.remove("scrolled")}
+t(),window.addEventListener("scroll",t)}),AOS.init({once:!0})

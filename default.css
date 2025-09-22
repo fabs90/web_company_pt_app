@@ -1,0 +1,548 @@
+:root {
+  --brokenwhite: #f1f4fa;
+  --darkblue: #063772;
+  --accent-color: #edcc3f;
+  --greenprimary: #00991d;
+}
+
+/* Navbar */
+.navbar-about {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar-documentation {
+  background-color: var(--greenprimary);
+  position: fixed; /* Kunci utamanya di sini */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar.scrolled {
+  background-color: var(--greenprimary) !important;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.nav-link {
+  font-weight: 400;
+  color: white;
+}
+
+.nav-item {
+  margin: 0 3px 0 3px;
+}
+
+.navbar .nav-link {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  padding: 15px 20px;
+  position: relative;
+}
+
+.navbar-brand img {
+  pointer-events: none;
+}
+
+/* hanya nav-link yang bukan dropdown-toggle */
+.navbar .nav-link:not(.dropdown-toggle)::after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #edcc3f;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.navbar .nav-link:not(.dropdown-toggle):hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.separator {
+  color: white; /* Mengatur warna pembatas */
+  padding: 0 10px; /* Memberikan sedikit ruang di sekitar pembatas */
+  display: flex;
+  align-items: center;
+}
+
+/* Styling untuk tombol CTA mobile */
+.navbar-collapse .btn {
+  width: 100%;
+  justify-content: center;
+}
+
+/* Hero */
+.hero {
+  background: url("assets/img/hero-section.jpg") center center / cover no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6); /* overlay gelap */
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-about {
+  background: url("assets/img/collapse-content/img5.webp") center center / cover
+    no-repeat;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  color: white;
+  position: relative;
+}
+
+.hero-about::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6); /* overlay gelap */
+}
+.hero-about-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-contact {
+  background: url("assets/img/hero_contact.webp") center center / cover
+    no-repeat;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  color: white;
+  position: relative;
+}
+
+.hero-contact::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6); /* overlay gelap */
+}
+.hero-contact-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-services {
+  background: url("assets/img/collapse-content/img2.webp") center center / cover
+    no-repeat;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  color: white;
+  position: relative;
+}
+
+.hero-services::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6); /* overlay gelap */
+}
+.hero-services-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Services */
+
+.services-category-title::after {
+  content: "";
+  width: 120px;
+  height: 1px;
+  display: inline-block;
+  background: var(--accent-color);
+  margin: 4px 10px;
+}
+
+.service-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.service-item a {
+  text-decoration: none;
+  background-color: none;
+  color: black;
+}
+
+/* Gambar default */
+.service-img {
+  border-radius: 15px;
+  width: 100%;
+  height: auto;
+  transition: transform 0.4s ease-in-out;
+}
+
+/* Efek zoom gambar saat hover di .service-item */
+.service-item:hover .service-img {
+  transform: scale(1.1);
+}
+
+/* Card detail */
+.services-details {
+  background: #fff;
+  padding: 40px 20px 30px 20px;
+  margin: -100px 20px 0 20px; /* efek card numpang ke atas gambar */
+  position: relative;
+  z-index: 2;
+  border-radius: 10px;
+  box-shadow: 0px 0 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Warna default h4 */
+.services-details h4 {
+  font-size: 20px;
+  color: black;
+  margin-bottom: 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Hover efek */
+.service-item:hover .services-details {
+  background: #f0efef; /* jadi agak gelap */
+}
+
+/* Carousel Armada */
+.splide__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.splide-warehouse img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.splide-equipment .splide__slide {
+  width: 500px;
+  height: 500px;
+}
+
+.splide-equipment img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+/* Why Choose Us Section */
+/* Aturan yang diubah dan disederhanakan */
+.why-choose-us {
+  background-color: var(--greenprimary);
+}
+.why-choose-us-header {
+  color: #fff;
+}
+/* Hapus aturan yang menimpa */
+.advantages-point-item div {
+  background: none;
+}
+
+.advantages-point-item h5 {
+  color: var(--greenprimary);
+  font-weight: bold;
+}
+
+.advantages-point-item img {
+  pointer-events: none;
+}
+
+/* Animasi Poin Why Choose Us */
+.why-choose-us .advantages-point-item {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Tambah transisi untuk bayangan juga */
+  background-color: var(--brokenwhite);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.advantages-point-item:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.achievement-parent h2 {
+  font-size: 60px;
+  font-weight: bold;
+  color: black;
+}
+
+.achievement-parent p {
+  font-size: 20px;
+}
+
+/* Client */
+
+.logo-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.logo-container {
+  flex-basis: 250px; /* Ukuran dasar untuk setiap logo */
+  text-align: center;
+}
+
+.logo-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.logo-grayscale {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease-in-out;
+}
+
+.logo-grayscale:hover {
+  filter: grayscale(0%);
+}
+
+/* Footer */
+
+.footer {
+  background-color: var(--greenprimary);
+}
+
+.footer img {
+  pointer-events: none;
+}
+
+.footer-link {
+  color: #f8f9fa;
+  text-decoration: none;
+  position: relative; /* Penting untuk positioning pseudo-element */
+  transition: color 0.3s ease;
+}
+
+.footer-link-email {
+  color: #f8f9fa;
+  text-decoration: none;
+}
+
+.footer-link::after {
+  content: ""; /* Wajib untuk pseudo-element */
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0); /* Awalnya, garis bawah tidak terlihat (skala 0) */
+  height: 2px;
+  bottom: -2px; /* Atur posisi garis bawah di bawah teks */
+  left: 0;
+  background-color: var(--accent-color);
+  transform-origin: bottom right; /* Titik asal animasi (muncul dari kanan) */
+  transition: transform 0.3s ease-out; /* Animasi transisi */
+}
+
+.footer-link:hover {
+  color: var(--accent-color);
+}
+
+.footer-link:hover::after {
+  transform: scaleX(1); /* Saat di-hover, skala 100% (garis bawah terlihat) */
+  transform-origin: bottom left; /* Titik asal animasi (muncul dari kiri) */
+}
+
+/* Visi-Misi */
+.visi-misi-section {
+  background-color: var(--greenprimary);
+}
+
+.visi-misi-section p {
+  font-size: 18px;
+  color: var(--brokenwhite);
+}
+
+.visi-misi-container h2 {
+  color: var(--brokenwhite);
+}
+
+/* Struktur Organisasi */
+.struktur-organisasi img {
+  pointer-events: none;
+}
+
+/* Download Company Profile */
+.download-profile-company img {
+  width: 30%;
+  height: auto;
+}
+
+.contact-us p {
+  color: var(--greenprimary);
+  font-size: 20px;
+}
+
+.map-frame {
+  width: 100%;
+  height: 400px;
+}
+
+.documentation {
+  padding-top: 100px;
+}
+
+.video-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.video-thumbnail {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-thumbnail:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.video-thumbnail img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.play-button svg {
+  fill: white;
+  width: 24px;
+  height: 24px;
+}
+
+.video-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 10px;
+  font-size: 14px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.modal-content {
+  background-color: var(--brokenwhite);
+}
+
+.modal-header {
+  border-bottom: none;
+}
+
+.modal-title {
+  color: var(--darkblue);
+}
+
+.modal-body {
+  position: relative;
+}
+
+.modal-body iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+@media (max-width: 991px) {
+  /* Media Query Navbar */
+  .navbar-collapse {
+    margin-top: 10px;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  .navbar-nav .nav-link {
+    color: #000 !important; /* biar teksnya kelihatan */
+  }
+
+  .splide-equipment .splide__slide {
+    width: 400px;
+    height: 400px;
+  }
+
+  .logo-container {
+    flex-basis: 150px; /* Ukuran dasar untuk setiap logo */
+    text-align: center;
+  }
+
+  .download-profile-company img {
+    width: 60%;
+    height: auto;
+  }
+
+  .map-frame {
+    width: 100%;
+    height: 350px;
+  }
+}

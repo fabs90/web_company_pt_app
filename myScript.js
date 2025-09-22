@@ -1,26 +1,2 @@
-AOS.init({ once: !0 }),
-  new Splide(".splide", {
-    type: "loop",
-    perPage: 3,
-    autoplay: !0,
-    interval: 3e3,
-    gap: "1rem",
-    breakpoints: { 640: { perPage: 1 } },
-  }).mount(),
-  new Splide(".splide-warehouse", {
-    type: "loop",
-    perPage: 3,
-    autoplay: !0,
-    interval: 3500,
-    gap: "1rem",
-    breakpoints: { 640: { perPage: 1 } },
-  }).mount(),
-  document.addEventListener("DOMContentLoaded", function () {
-    let e = document.querySelector(".navbar");
-    function a() {
-      window.scrollY > 100
-        ? e.classList.add("scrolled")
-        : e.classList.remove("scrolled");
-    }
-    a(), window.addEventListener("scroll", a);
-  });
+AOS.init({once:!0}),new Splide(".splide",{type:"loop",perPage:3,autoplay:!0,interval:3e3,gap:"1rem",breakpoints:{640:{perPage:1}},}).mount(),new Splide(".splide-warehouse",{type:"loop",perPage:3,autoplay:!0,interval:3500,gap:"1rem",breakpoints:{640:{perPage:1}},}).mount(),document.addEventListener("DOMContentLoaded",function(){let e=document.querySelector(".navbar");function a(){window.scrollY>100?e.classList.add("scrolled"):e.classList.remove("scrolled")}
+a(),window.addEventListener("scroll",a)})
