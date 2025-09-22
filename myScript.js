@@ -1,59 +1,26 @@
-AOS.init({
-  once: true, // Mengaktifkan opsi 'once'
-});
-
-new Splide(".splide", {
-  type: "loop",
-  perPage: 3,
-  autoplay: true,
-  interval: 3000,
-  gap: "1rem",
-  breakpoints: {
-    640: {
-      perPage: 1,
-    },
-  },
-}).mount();
-
-new Splide(".splide-warehouse", {
-  type: "loop",
-  perPage: 3,
-  autoplay: true,
-  interval: 3500,
-  gap: "1rem",
-  breakpoints: {
-    640: {
-      perPage: 1,
-    },
-  },
-}).mount();
-
-new Splide(".splide-equipment", {
-  type: "loop",
-  perPage: 3,
-  autoplay: true,
-  interval: 4000,
-  gap: "1rem",
-  breakpoints: {
-    640: {
-      perPage: 1,
-    },
-  },
-}).mount();
-
-document.addEventListener("DOMContentLoaded", function () {
-  const navbar = document.querySelector(".navbar");
-  const scrollThreshold = 100;
-
-  function checkScrollPosition() {
-    if (window.scrollY > scrollThreshold) {
-      navbar.classList.add("scrolled");
-    } else {
-      navbar.classList.remove("scrolled");
+AOS.init({ once: !0 }),
+  new Splide(".splide", {
+    type: "loop",
+    perPage: 3,
+    autoplay: !0,
+    interval: 3e3,
+    gap: "1rem",
+    breakpoints: { 640: { perPage: 1 } },
+  }).mount(),
+  new Splide(".splide-warehouse", {
+    type: "loop",
+    perPage: 3,
+    autoplay: !0,
+    interval: 3500,
+    gap: "1rem",
+    breakpoints: { 640: { perPage: 1 } },
+  }).mount(),
+  document.addEventListener("DOMContentLoaded", function () {
+    let e = document.querySelector(".navbar");
+    function a() {
+      window.scrollY > 100
+        ? e.classList.add("scrolled")
+        : e.classList.remove("scrolled");
     }
-  }
-
-  checkScrollPosition();
-
-  window.addEventListener("scroll", checkScrollPosition);
-});
+    a(), window.addEventListener("scroll", a);
+  });

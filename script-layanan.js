@@ -1,46 +1,26 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const navbar = document.querySelector(".navbar-about");
-  const scrollThreshold = 100;
-
-  function checkScrollPosition() {
-    if (window.scrollY > scrollThreshold) {
-      navbar.classList.add("scrolled");
-    } else {
-      navbar.classList.remove("scrolled");
-    }
+  let e = document.querySelector(".navbar-about");
+  function o() {
+    window.scrollY > 100
+      ? e.classList.add("scrolled")
+      : e.classList.remove("scrolled");
   }
-
-  checkScrollPosition();
-
-  window.addEventListener("scroll", checkScrollPosition);
-});
-
-AOS.init({
-  once: true, // Mengaktifkan opsi 'once'
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  // Ambil semua tombol accordion di halaman
-  const allButtons = document.querySelectorAll(".accordion-button");
-
-  allButtons.forEach((button) => {
-    button.addEventListener("click", function () {
-      const isB3 = this.closest("#accordionExample");
-
-      // Dapatkan ID dari accordion lain
-      const otherAccordionId = isB3 ? "accordion-non-b3" : "accordionExample";
-      const otherAccordion = document.getElementById(otherAccordionId);
-
-      // Temukan semua item yang terbuka di accordion lain dan tutup mereka
-      const openItems = otherAccordion.querySelectorAll(
-        ".accordion-collapse.show"
-      );
-      openItems.forEach((item) => {
-        const collapse = new bootstrap.Collapse(item, {
-          toggle: false,
+  o(), window.addEventListener("scroll", o);
+}),
+  AOS.init({ once: !0 }),
+  document.addEventListener("DOMContentLoaded", function () {
+    let e = document.querySelectorAll(".accordion-button");
+    e.forEach((e) => {
+      e.addEventListener("click", function () {
+        let e = this.closest("#accordionExample"),
+          o = document.getElementById(
+            e ? "accordion-non-b3" : "accordionExample"
+          ),
+          t = o.querySelectorAll(".accordion-collapse.show");
+        t.forEach((e) => {
+          let o = new bootstrap.Collapse(e, { toggle: !1 });
+          o.hide();
         });
-        collapse.hide();
       });
     });
   });
-});

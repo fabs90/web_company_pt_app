@@ -1,20 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const navbar = document.querySelector(".navbar-about");
-  const scrollThreshold = 100;
-
-  function checkScrollPosition() {
-    if (window.scrollY > scrollThreshold) {
-      navbar.classList.add("scrolled");
-    } else {
-      navbar.classList.remove("scrolled");
-    }
+  let e = document.querySelector(".navbar-about");
+  function t() {
+    window.scrollY > 100
+      ? e.classList.add("scrolled")
+      : e.classList.remove("scrolled");
   }
-
-  checkScrollPosition();
-
-  window.addEventListener("scroll", checkScrollPosition);
-});
-
-AOS.init({
-  once: true, // Mengaktifkan opsi 'once'
-});
+  t(), window.addEventListener("scroll", t);
+}),
+  AOS.init({ once: !0 });
