@@ -369,6 +369,7 @@
 .download-profile-company img {
   width: 30%;
   height: auto;
+  cursor: pointer;
 }
 .contact-us p {
   color: var(--black);
